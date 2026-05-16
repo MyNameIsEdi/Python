@@ -1,5 +1,5 @@
 
-# QA Automation: Python Data Handling & Validation 🚀
+# QA Automation | Python Data Handling & Validation 🚀
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue?style=for-the-badge&logo=python)
 ![QA Focus](https://img.shields.io/badge/Focus-QA_%26_Automation-green?style=for-the-badge)
 ![Learning](https://img.shields.io/badge/Level-Beginner-orange?style=for-the-badge)
