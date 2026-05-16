@@ -49,7 +49,3 @@ python main.py
 * **Data Types:** `String`, `Integer`, `Float`, `Boolean`
 * **Flow Control:** `If-Else` conditional logic
 * **Syntax & Utilities:** `f-strings` (Interpolation), I/O handling, Variable instantiation
-
-```
-
-```
