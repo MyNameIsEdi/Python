@@ -24,6 +24,7 @@ This repository showcases test data handling, run-time state management, interac
 
 * **`string_exercises.py`**: Focuses on string indexing, slicing, length calculation, and character replacement.
 * **`conditions_exercises.py`**: Focuses on control flow (`if-elif-else`), type casting, error handling, and basic input validation (e.g., email format checks).
+* **`length_validation.py`**: Focuses on boundary testing, evaluating string lengths, and grouping states into distinct ranges.
 
 ---
 
@@ -44,8 +45,8 @@ Implements conditional flow control (`if-elif-else`) to evaluate states. Analyze
 ### 5. Type Casting & Error Handling
 Demonstrates safe data conversion (e.g., `String` to `Float`) using `try-except` blocks. This ensures the script handles invalid inputs gracefully without crashing, mimicking robust backend validation.
 
-### 6. Business Logic Validation
-Implements specific business rules to validate data integrity, such as checking minimum string lengths and evaluating specific character placements for mock email addresses.
+### 6. Boundary Testing & Range Validation
+Implements logic to test data against defined boundaries (e.g., less than 4, greater than 9). This mimics real-world form validation (like checking if a password is long enough but not too long).
 
 ---
 
@@ -67,10 +68,17 @@ python string_exercises.py
 
 ```
 
-**Run Conditions & Validation Exercises:**
+**Run Conditions & Error Handling:**
 
 ```bash
 python conditions_exercises.py
+
+```
+
+**Run Length Validation (Boundary Testing):**
+
+```bash
+python length_validation.py
 
 ```
 
@@ -84,25 +92,23 @@ python conditions_exercises.py
 * **Technologies:** Python 3 (Standard Library)
 * **Data Types:** `String`, `Integer`, `Float`, `Boolean`
 * **Flow Control:** `If-Elif-Else` logic, `Try-Except` error handling
-* **Syntax & Utilities:** `f-strings` (Interpolation), I/O handling, Type Casting (`float()`)
+* **Syntax & Utilities:** `f-strings` (Interpolation), I/O handling, `len()` function, Type Casting (`float()`)
 
 ---
 
 ## 🖥️ Example Output
 
-Below is an example of what you will see in the terminal when running the **validation** script:
+Below is an example of what you will see in the terminal when running the **`length_validation.py`** script:
 
 ```text
---- Exercise 1 ---
-Please enter a number: -4.5
-The number is negative.
+--- String Length Validation ---
+Please enter a string: automation
+too long
+(The actual length was: 10)
 
---- Exercise 2 ---
-Please enter a string: Apple
-Modified string: apple
-
---- Exercise 3 ---
-Please enter an email address: bad@email@
-ERROR
+--- String Length Validation ---
+Please enter a string: test
+OK
+(The actual length was: 4)
 
 ```
