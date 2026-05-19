@@ -25,6 +25,7 @@ This repository showcases test data handling, run-time state management, interac
 * **`string_exercises.py`**: Focuses on string indexing, slicing, length calculation, and character replacement.
 * **`conditions_exercises.py`**: Focuses on control flow (`if-elif-else`), type casting, error handling, and basic input validation (e.g., email format checks).
 * **`length_validation.py`**: Focuses on boundary testing, evaluating string lengths, and grouping states into distinct ranges.
+* **`practice_exercises.py`**: Focuses on complex password validation, dynamic error feedback, and data clamping (enforcing numeric boundaries).
 
 ---
 
@@ -33,20 +34,14 @@ This repository showcases test data handling, run-time state management, interac
 ### 1. Test Data Initialization & Mutation
 Initialization and management of variables across various data types. Demonstrates the ability to override and update system variables dynamically, which is crucial for simulating changes in a System Under Test (SUT).
 
-### 2. Interactive I/O Processing
-Captures dynamic parameters in real-time using the `input()` function, processing user data to generate custom, context-aware outputs.
-
-### 3. Advanced String Manipulation
+### 2. Advanced String Manipulation
 Utilizes indexing and slicing to extract specific data points from strings. Employs **f-strings** (String Interpolation) to dynamically inject variables into text, a Python best practice for readable execution logs.
 
-### 4. Control Flow & Validation Logic
-Implements conditional flow control (`if-elif-else`) to evaluate states. Analyzes current states to output formal execution statuses, forming the foundational infrastructure for Assertion mechanisms in test automation.
+### 3. Control Flow & Boundary Validation
+Implements conditional flow control (`if-elif-else`) to evaluate states. Analyzes current states to output formal execution statuses, forming the foundational infrastructure for Assertion mechanisms in test automation. Includes **Data Clamping** to enforce numeric boundaries (e.g., constraining variables between 0 and 120).
 
-### 5. Type Casting & Error Handling
-Demonstrates safe data conversion (e.g., `String` to `Float`) using `try-except` blocks. This ensures the script handles invalid inputs gracefully without crashing, mimicking robust backend validation.
-
-### 6. Boundary Testing & Range Validation
-Implements logic to test data against defined boundaries (e.g., less than 4, greater than 9). This mimics real-world form validation (like checking if a password is long enough but not too long).
+### 4. Dynamic Error Feedback (Password Validation)
+Simulates real-world authentication testing by evaluating passwords against multiple constraints (length, starting characters, ending symbols) and providing specific, dynamic feedback based on the exact failure point.
 
 ---
 
@@ -62,27 +57,20 @@ Before running the scripts, ensure you have the following installed:
 
 To execute the scripts in your local environment, open your terminal in the project's root directory and run the desired file:
 
-**Run String Exercises:**
 ```bash
+# Run String Exercises
 python string_exercises.py
 
-```
-
-**Run Conditions & Error Handling:**
-
-```bash
+# Run Conditions & Error Handling
 python conditions_exercises.py
 
-```
-
-**Run Length Validation (Boundary Testing):**
-
-```bash
+# Run Length Validation
 python length_validation.py
 
-```
+# Run Advanced Practice (Passwords & Clamping)
+python practice_exercises.py
 
-*(**Note:** For specific environments such as macOS or Linux, you may need to use `python3` instead of `python`)*
+```
 
 ---
 
@@ -90,25 +78,22 @@ python length_validation.py
 
 * **Environment:** Visual Studio Code (VS Code)
 * **Technologies:** Python 3 (Standard Library)
-* **Data Types:** `String`, `Integer`, `Float`, `Boolean`
-* **Flow Control:** `If-Elif-Else` logic, `Try-Except` error handling
-* **Syntax & Utilities:** `f-strings` (Interpolation), I/O handling, `len()` function, Type Casting (`float()`)
+* **Flow Control:** `If-Elif-Else` logic, Multiple constraint checking
+* **Techniques:** Data Clamping, String Indexing (`[0]`, `[-1]`), Logic Operators (`and`, `or`, `!=`)
 
 ---
 
 ## 🖥️ Example Output
 
-Below is an example of what you will see in the terminal when running the **`length_validation.py`** script:
+Below is an example of what you will see in the terminal when running the **`practice_exercises.py`** script:
 
 ```text
---- String Length Validation ---
-Please enter a string: automation
-too long
-(The actual length was: 10)
+--- Age Check ---
+Please enter your age: -5
+teenager
 
---- String Length Validation ---
-Please enter a string: test
-OK
-(The actual length was: 4)
+--- Password Validation ---
+Please enter a password: Hello1234
+Error: Password must start with 'C' or 'Z'.
 
 ```
